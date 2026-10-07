@@ -1,0 +1,28 @@
+name: kituen
+description: "Smoking Map App"
+publish_to: 'none'
+
+# ↓↓↓ この environment のブロックを追加（または修正）してください ↓↓↓
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  mysql1: ^0.20.0  # 先ほど追加したパッケージ
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+flutter:
+  uses-material-design: true
+
+
+  dependencies:
+  flutter:
+    sdk: flutter
+  flutter_map: ^6.0.0      # 地図描画用
+  latlong2: ^0.9.0         # 緯度経度クラス用
+  http: ^1.1.0              # API通信用
+  flutter_polyline_points: ^2.0.0 # ルート文字列(Polyline)のデコード用

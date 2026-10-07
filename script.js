@@ -898,3 +898,19 @@ async function deleteCustomPin(id) {
         }
     }
 }
+
+// === ページの読み込み完了時に自動的にログイン状態にする ===
+document.addEventListener('DOMContentLoaded', () => {
+    // 固定のユーザー情報（IDと名前）をセット
+    localStorage.setItem('current_user_id', '1');
+    localStorage.setItem('current_user_name', 'ゲストユーザー');
+
+    // ログインモーダルを非表示にする
+    const loginModal = document.getElementById('login-modal');
+    if (loginModal) {
+        loginModal.style.display = 'none';
+    }
+
+    // ユーザー固有のピン情報を読み込む
+    loadCustomPins();
+});
